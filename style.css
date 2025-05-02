@@ -1,0 +1,7 @@
+/* --- Base Styles --- */
+body {
+  font-family: 'Libre Baskerville', serif;
+  background: linear-gradient(to bottom, #f5f3ef, #eae6df);
+  color: #333;
+}
+
