@@ -13,13 +13,35 @@
   <div id="score" class="d-none h5 mb-3 text-primary fw-bold">Score: 0</div>
 
 
+<!-- Game & Loader wrapper (flex-grow) -->
+<div class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+  <!-- Loading overlay -->
+  <div id="overlay" class="d-none position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white bg-opacity-75 z-3">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
   <!-- Start Screen -->
 <div id="startScreen" class="d-flex flex-column align-items-center justify-content-center vh-100">
   <h1 class="display-4 mb-3">🎨 Which Painting is Older?</h1>
   <p class="lead mb-4">Select the older painting and see how many you can get right!</p>
   <button class="btn btn-success btn-lg shadow" onclick="startGame()">Start Game</button>
 </div>
+
+
+  <!-- Game area -->
+  <div id="game" class="d-none row justify-content-center w-100 gx-4 overflow-visible" >
+    <div class="col-12 col-md-5 mb-3 overflow-visible">
+      <div class="card h-100 artwork" id="leftArtwork" role="button" style="height: 100%;"></div>
+    </div>
+    <div class="d-none d-md-block col-md-1"></div>
+    <div class="col-12 col-md-5 mb-3 overflow-visible">
+      <div class="card h-100 artwork" id="rightArtwork" role="button" style="height: 100%;"></div>
+    </div>
+  </div>
+</div>
   <script src="script.js"></script>
- 
+
 </body>
 </html>

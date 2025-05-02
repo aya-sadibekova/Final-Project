@@ -5,3 +5,121 @@ body {
   color: #333;
 }
 
+h1, h2, #modalTitle {
+  font-family: 'Playfair Display', serif;
+  color: #3a3a3a;
+}
+
+#score {
+  background-color: #f0ede7;
+  border: 1px solid #d5d1c9;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Libre Baskerville', serif;
+  color: #6e5c4f;
+}
+
+#message {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* --- Buttons --- */
+button.btn {
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Success button custom colors */
+button.btn.btn-success {
+  background-color: #5b4727;
+  color: #fff;
+}
+
+button.btn.btn-success:hover,
+button.btn.btn-success:focus {
+  background-color: #3a2e1b;
+  color: #fff;
+}
+
+/* Primary button custom colors */
+button.btn.btn-primary {
+  background-color: #83714f;
+  color: #fff;
+}
+
+button.btn.btn-primary:hover,
+button.btn.btn-primary:focus {
+  background-color: #5e513c;
+  color: #fff;
+}
+
+a.btn-outline-primary:hover,
+a.btn-outline-primary:focus {
+  background-color: #83714f;
+  color: #fff;
+}
+
+button.btn:focus,
+button.btn:active {
+  box-shadow: none;
+}
+
+
+/* --- Cards --- */
+.card {
+  border: 1px solid #d8d3c8;
+  background-color: #fffaf4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a3b30;
+}
+
+.card-img-top {
+  max-height: 50vh;
+  object-fit: contain;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: #f5f3ef;
+}
+
+/* --- Game Layout --- */
+#gameWrapper {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+#game {
+  flex: 1 1 auto;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artwork {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- Answer Borders --- */
+.correct {
+  border: 4px solid #28a745 !important;
+}
+
+.wrong {
+  border: 4px solid #dc3545 !important;
+}
