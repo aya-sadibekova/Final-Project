@@ -156,3 +156,39 @@ a.btn-outline-primary:hover {
 .wrong {
   border: 4px solid #dc3545 !important;
 }
+
+/* --- Mobile Responsive --- */
+@media (max-width: 767px) {
+  #game {
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .artwork {
+    margin-bottom: 1vh;
+  }
+
+  .card-img-top {
+    max-height: 30vh;
+  }
+
+  #nextButton {
+    height: 7vh;
+  }
+
+  #message {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-body > div {
+    width: 100% !important;
+  }
+}
