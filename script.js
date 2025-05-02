@@ -81,6 +81,26 @@ function renderPaintingCard(element, painting, enableLearnMore = false) {
   element.classList.remove("correct", "wrong");
 }
 
+function showLearnMore(painting) {
+  document.getElementById("modalImage").src = painting.image;
+  document.getElementById("modalImage").alt = painting.title;
+  document.getElementById("modalTitle").textContent =
+    painting.title || "Unknown";
+  document.getElementById("modalDate").textContent =
+    painting.objectDate || "N/A";
+  document.getElementById("modalDepartment").textContent =
+    painting.department || "N/A";
+  document.getElementById("modalCulture").textContent =
+    painting.culture || "N/A";
+  document.getElementById("modalLink").href = painting.objectURL || "#";
+  document.getElementById("modalArtist").textContent =
+    painting.artistDisplayName || "Unknown";
+  document.getElementById("modalMedium").textContent = painting.medium || "N/A";
+  console.log(painting);
+  const modal = new bootstrap.Modal(document.getElementById("artworkModal"));
+  modal.show();
+}
+
 function handleClick(choice, left, right) {
   const correctSide = left.year < right.year ? "left" : "right";
   const isCorrect = choice === correctSide;
@@ -129,6 +149,15 @@ function endGame() {
   }
 
   highscoreDisplay.textContent = `Your Score: ${score} | High Score: ${highScore}`;
+}
+
+function restartGame() {
+  score = 0;
+  shownIDs.clear();
+  scoreDiv.textContent = `Score: ${score}`;
+  gameOverDiv.classList.add("d-none");
+  gameDiv.classList.remove("d-none");
+  loadGame();
 }
 
 async function loadGame() {

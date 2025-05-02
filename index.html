@@ -44,6 +44,39 @@
 
 <!-- Next button -->
 <button id="nextButton" class="btn btn-primary mb-3 w-25 mx-auto d-none" onclick="nextRound()">Next</button>
+
+<!-- Game Over Screen -->
+<div id="gameOver" class="d-none d-flex flex-column align-items-center justify-content-center vh-100">
+  <h2 class="text-danger">🎮 Game Over</h2>
+  <p id="highscore" class="fs-5"></p>
+  <button class="btn btn-primary mt-2" onclick="restartGame()">Restart Game</button>
+</div>
+
+<!-- Artwork Info Modal -->
+<div class="modal fade" id="artworkModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-custom-size">
+    <div class="modal-content">
+      <div class="modal-body d-flex p-0" style="height: 500px;">
+        <!-- Left: Image -->
+        <div class="w-50 bg-dark d-flex align-items-center justify-content-center p-3">
+          <img id="modalImage" class="img-fluid h-100 object-fit-contain" alt="Artwork" />
+        </div>
+
+        <!-- Right: Info -->
+        <div class="w-50 p-4 overflow-auto text-start">
+          <h2 id="modalTitle" class="mb-3"></h2>
+          <p><strong>Date:</strong> <span id="modalDate"></span></p>
+          <p><strong>Department:</strong> <span id="modalDepartment"></span></p>
+          <p><strong>Culture:</strong> <span id="modalCulture"></span></p>
+          <p><strong>Artist:</strong> <span id="modalArtist"></span></p>
+          <p><strong>Medium:</strong> <span id="modalMedium"></span></p>
+          <a id="modalLink" href="#" target="_blank" class="btn btn-outline-primary mt-3 ms-0">View on MetMuseum.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
