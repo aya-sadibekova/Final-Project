@@ -57,6 +57,12 @@ button.btn.btn-primary:focus {
   color: #fff;
 }
 
+/* Outline-style link button */
+a.btn-outline-primary {
+  border-color: #83714f;
+  color: #83714f;
+}
+
 a.btn-outline-primary:hover,
 a.btn-outline-primary:focus {
   background-color: #83714f;
